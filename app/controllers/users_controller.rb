@@ -30,7 +30,4 @@ class UsersController < ApplicationController
     User.find(params[:id]).delete
     render :text => "User deleted"
   end
-
-
-
 end

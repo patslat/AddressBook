@@ -15,3 +15,9 @@ User.create(name: 'Freud', email: 'freud@yourmom.com')
 User.create(name: 'Sartre', email: 'nothing@ness.com')
 User.create(name: 'Bukowski' , email: 'poordrunk@aol.com')
 User.create(name: 'Vonnegut', email: 'breakfastof@champions.com')
+
+
+Contact.create(address: '2 Chainz blvd', email: '2@chainz.com', name: '2Chainz', phone_number: '222222222', user_id: 1)
+Contact.create(address: '1 boss blvd', email: 'theboss@ross.rick', name: 'Rick Ross', phone_number: '1800ross', user_id: 1)
+Contact.create(address: '2 Chainz blvd', email: '2@chainz.com', name: '2Chainz', phone_number: '222222222', user_id: 1)
+Contact.create(address: '2 Chainz blvd', email: '2@chainz.com', name: '2Chainz', phone_number: '222222222', user_id: 1)
