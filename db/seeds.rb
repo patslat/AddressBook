@@ -19,5 +19,15 @@ User.create(name: 'Vonnegut', email: 'breakfastof@champions.com')
 
 Contact.create(address: '2 Chainz blvd', email: '2@chainz.com', name: '2Chainz', phone_number: '222222222', user_id: 1)
 Contact.create(address: '1 boss blvd', email: 'theboss@ross.rick', name: 'Rick Ross', phone_number: '1800ross', user_id: 1)
-Contact.create(address: '2 Chainz blvd', email: '2@chainz.com', name: '2Chainz', phone_number: '222222222', user_id: 1)
-Contact.create(address: '2 Chainz blvd', email: '2@chainz.com', name: '2Chainz', phone_number: '222222222', user_id: 1)
+Contact.create(address: 'Pusha T road', email: 'pusha@tee.com', name: 'Pusha T', phone_number: '1800PUSHA', user_id: 2)
+Contact.create(address: 'Kanye Road west', email: 'kw@college_dropout.com', name: 'Kanye West', phone_number: '415kanye', user_id: 3)
+
+Favorite.create(user_id: 1, contact_id: 1)
+Favorite.create(user_id: 2, contact_id: 3)
+Favorite.create(user_id: 3, contact_id: 4)
+
+Authentication.create(user_id: 1, password: '123')
+Authentication.create(user_id: 2, password: '123')
+Authentication.create(user_id: 3, password: '123')
+Authentication.create(user_id: 4, password: '123')
+Authentication.create(user_id: 5, password: '123')

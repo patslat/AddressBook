@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user, only: :update, only: :destroy
 
   def index
     render :json => User.all
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
       render :json => user.errors, status: :unprocessable_entity
     end
   end
+
 
   def update
     update_user = User.find(params[:id])

@@ -70,7 +70,7 @@ First::Application.routes.draw do
   put '/contacts/:id' => 'contacts#update' #*
   delete '/contacts/:id' => 'contacts#destroy' #*
 
-  get '/favorites/:user_id/' => 'favorites#index'
+  get '/favorites/:user_id/' => 'favorites#index' #
   post '/favorites' => 'favorites#create' #*
   delete '/favorites/:id' => 'favorites#destroy' #*
 
