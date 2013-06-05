@@ -5,7 +5,7 @@ class Authentication < ActiveRecord::Base
 
   belongs_to :user
 
-  def self.get_authentication(user_id)
+  def self.get_token(user_id)
     puts "Enter your email."
     email = gets.chomp
 
@@ -16,12 +16,12 @@ class Authentication < ActiveRecord::Base
       user = User.find(user_id)
       authenticate_email(user, email)
     else
-      user = User.find_by_email(email)
+      raise "Invalid email" unless user = User.find_by_email(email)
     end
 
-
     if authentic?(user, password)
-      user.authentication.token = SecureRandom.base64(5)
+      user.authentication.token ||= SecureRandom.base64(5)
+      user.authentication.save
     else
       raise "Invalid login."
     end
@@ -34,6 +34,6 @@ class Authentication < ActiveRecord::Base
   end
 
   def self.authenticate_email(user, email)
-    raise "invalid email" unless user.authentication.email == email
+    raise "invalid email" unless user.email == email
   end
 end

@@ -5,10 +5,8 @@ url = Addressable::URI.new(
   scheme: 'http',
   host: 'localhost',
   port: 3000,
-  path: '/users.json'
+  path: '/users/2.json'
 
 ).to_s
 
-
-
-p RestClient.post(url, user: {name: 'wc', email: 'wc@wc.com'})
+p RestClient.get(url)

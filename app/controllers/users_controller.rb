@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   before_filter :authenticate_user, only: :update, only: :destroy
 
   def index
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).delete
-    render :text => "User deleted"
+    User.find(params[:id]).destroy
+    render :text => "User destroyed"
   end
 end

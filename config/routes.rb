@@ -69,10 +69,13 @@ First::Application.routes.draw do
   get '/contacts/:id' => 'contacts#show' #*
   put '/contacts/:id' => 'contacts#update' #*
   delete '/contacts/:id' => 'contacts#destroy' #*
+  get '/contacts/search' => 'contacts#search'
 
   get '/favorites/:user_id/' => 'favorites#index' #
   post '/favorites' => 'favorites#create' #*
   delete '/favorites/:id' => 'favorites#destroy' #*
+
+
 
   # resources :users do
   #   resources :contacts, :only => [:index]
